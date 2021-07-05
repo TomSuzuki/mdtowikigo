@@ -1,3 +1,3 @@
-module github.com/TomSuzuki/mdtowiki_go
+module github.com/TomSuzuki/mdtowikigo
 
 go 1.15

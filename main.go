@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/TomSuzuki/gomarkdown"
+	"github.com/TomSuzuki/mdtowikigo/mdtowiki"
 )
 
 func main() {
@@ -15,9 +15,9 @@ func main() {
 	fmt.Println("running...")
 
 	md, _ := ioutil.ReadFile(inputFile)
-	wiki := gomarkdown.MarkdownToHTML(string(md))
+	wiki := mdtowiki.MdToWiki(string(md))
 
-	ioutil.WriteFile("write.txt", []byte(wiki), 0666)
+	ioutil.WriteFile(outputFile, []byte(wiki), 0666)
 
 	fmt.Printf("%s -> %s\n", inputFile, outputFile)
 
